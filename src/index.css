@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* ─── Fluid root font-size ───────────────────────────────────────────────────
+   Scales linearly from 13px (320 px wide) → 16px (1280 px wide).
+   Because Tailwind's font-size utilities use rem, every text size on the page
+   will shrink proportionally when the window is small / minimised.
+   ──────────────────────────────────────────────────────────────────────────── */
+html {
+  font-size: clamp(13px, 0.8125rem + 0.9375vw, 16px);
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-evoke-black: #050505;
+  --color-evoke-accent: #2563eb;
+  --color-evoke-accent-light: #60a5fa;
+  --color-evoke-accent-dark: #1d4ed8;
+  --color-evoke-surface: #f8fafc;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-evoke-black bg-[#faf9ff] antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 rounded-3xl shadow-xl;
+  }
+
+  .section-padding {
+    @apply py-16 px-6 md:px-12 lg:px-24;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-evoke-accent to-blue-400;
+  }
+
+  .bg-grid-pattern {
+    background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 15s ease infinite;
+  }
+}
+
+@keyframes gradient-x {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Heartbeat animation ──────────────────────────────────────────────────── */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14%       { transform: scale(1.15); }
+  28%       { transform: scale(1); }
+  42%       { transform: scale(1.12); }
+  56%       { transform: scale(1); }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.8s ease-in-out infinite;
+}
