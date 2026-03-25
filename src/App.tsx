@@ -89,7 +89,11 @@ const Navbar = ({ mobileOpen, setMobileOpen }: { mobileOpen: boolean, setMobileO
           />
           <div className="flex flex-col leading-tight mt-0 md:mt-1 transition-transform duration-500 group-hover:translate-x-1">
             <span className={`text-2xl md:text-4xl font-black tracking-tight ${scrolled && !mobileOpen ? 'text-slate-900 group-hover:text-blue-600' : 'text-white group-hover:text-blue-200'} transition-colors duration-300`}>EVOKE AI</span>
+<<<<<<< HEAD
             <span className={`text-[10px] md:text-sm font-semibold tracking-widest ${scrolled && !mobileOpen ? 'text-slate-500 group-hover:text-blue-500' : 'text-white/60 group-hover:text-white'} transition-colors duration-300 uppercase`}>A Division of damnart </span>
+=======
+            <span className={`text-[10px] md:text-sm font-semibold tracking-widest ${scrolled && !mobileOpen ? 'text-slate-500 group-hover:text-blue-500' : 'text-white/60 group-hover:text-white'} transition-colors duration-300 uppercase`}>Enterprise AI Platform</span>
+>>>>>>> ea6fb59 (new changes)
           </div>
         </div>
 
@@ -250,7 +254,11 @@ const Hero = () => {
     }
   };
 
+<<<<<<< HEAD
   const itemVariants = {
+=======
+  const itemVariants: any = {
+>>>>>>> ea6fb59 (new changes)
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
   };
@@ -501,7 +509,11 @@ const PainPoints = () => {
                 whileHover={{ rotate: 15, scale: 1.2 }}
                 className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-8 shadow-inner relative z-10"
               >
+<<<<<<< HEAD
                 {React.isValidElement(p.icon) && (p.icon.type === 'img' ? p.icon : React.cloneElement(p.icon as React.ReactElement, { size: 32 }))}
+=======
+                {React.isValidElement(p.icon) && (p.icon.type === 'img' ? p.icon : React.cloneElement(p.icon as any, { size: 32 }))}
+>>>>>>> ea6fb59 (new changes)
               </motion.div>
               <div className="relative z-10">
                 <h3 className="text-2xl font-black mb-4 tracking-tight">{p.title}</h3>
@@ -1179,11 +1191,19 @@ const Footer = () => {
                 <img src={evokeLogo} alt="Evoke AI" className="h-12 md:h-14 w-auto object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-500" />
                 <div className="flex flex-col leading-tight">
                   <span className="text-3xl font-black tracking-tight text-white group-hover:text-evoke-accent transition-colors duration-500 uppercase">EVOKE AI</span>
+<<<<<<< HEAD
                   <span className="text-sm font-semibold text-white/50 tracking-widest uppercase">A Division of DamnArt</span>
                 </div>
               </div>
               <p className="text-gray-400 text-lg max-w-sm mb-6 leading-relaxed">
                 Enterprise AI Platform — turning your DMs into a 24/7 automated sales machine.
+=======
+                  <span className="text-sm font-semibold text-white/50 tracking-widest uppercase">Enterprise AI Platform</span>
+                </div>
+              </div>
+              <p className="text-gray-400 text-lg max-w-sm mb-6 leading-relaxed">
+                A division of damnart-turning your DMs into a 24/7 automated sales machine.
+>>>>>>> ea6fb59 (new changes)
               </p>
               <div className="flex gap-4">
                 <a href="https://www.instagram.com/damnart_marketing_agency?igsh=cDRuZWx6dG56bDkx" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-orange-500 flex items-center justify-center hover:scale-110 hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300"><Instagram size={18} className="text-white" /></a>
@@ -1238,7 +1258,11 @@ const Footer = () => {
                 ].map((item, i) => (
                   <a key={i} href={item.href} target={item.href.startsWith('http') ? "_blank" : undefined} rel="noopener noreferrer" className="group flex items-center gap-4 hover:text-white transition-colors bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-evoke-accent/30">
                     <div className="w-12 h-12 rounded-full bg-evoke-accent/10 flex items-center justify-center group-hover:bg-evoke-accent transition-colors shrink-0">
+<<<<<<< HEAD
                       {React.cloneElement(item.icon as React.ReactElement, { size: 18, className: "text-evoke-accent group-hover:text-white transition-colors" })}
+=======
+                      {React.cloneElement(item.icon as any, { size: 18, className: "text-evoke-accent group-hover:text-white transition-colors" })}
+>>>>>>> ea6fb59 (new changes)
                     </div>
                     <span className="font-bold text-base truncate">{item.label}</span>
                   </a>
@@ -1411,7 +1435,11 @@ const EvokeAdvantage = () => {
     }
   ];
 
+<<<<<<< HEAD
   const container = {
+=======
+  const container: any = {
+>>>>>>> ea6fb59 (new changes)
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -1421,7 +1449,11 @@ const EvokeAdvantage = () => {
     }
   };
 
+<<<<<<< HEAD
   const item = {
+=======
+  const item: any = {
+>>>>>>> ea6fb59 (new changes)
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };

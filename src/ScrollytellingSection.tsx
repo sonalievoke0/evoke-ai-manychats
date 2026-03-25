@@ -116,7 +116,11 @@ export const ScrollytellingSection = () => {
             >
               <div className="max-w-xl flex flex-col items-start text-left lg:pr-24 relative z-20">
                 <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-6">
+<<<<<<< HEAD
                   {React.cloneElement(stage.icon as React.ReactElement, { className: "w-5 h-5 md:w-8 md:h-8 text-white" })}
+=======
+                  {React.cloneElement(stage.icon as any, { className: "w-5 h-5 md:w-8 md:h-8 text-white" })}
+>>>>>>> ea6fb59 (new changes)
                   <span className="text-[10px] md:text-base font-black uppercase tracking-[0.15em] md:tracking-[0.25em] text-slate-400">
                     {stage.tagline}
                   </span>

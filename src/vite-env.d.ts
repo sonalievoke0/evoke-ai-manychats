@@ -24,3 +24,21 @@ declare module '*.svg' {
     const src: string;
     export default src;
 }
+<<<<<<< HEAD
+=======
+
+declare module '*.mp4' {
+    const src: string;
+    export default src;
+}
+
+declare module '*.webm' {
+    const src: string;
+    export default src;
+}
+
+declare module '*.ogg' {
+    const src: string;
+    export default src;
+}
+>>>>>>> ea6fb59 (new changes)
