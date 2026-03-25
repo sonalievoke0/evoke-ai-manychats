@@ -89,9 +89,6 @@ const Navbar = ({ mobileOpen, setMobileOpen }: { mobileOpen: boolean, setMobileO
           />
           <div className="flex flex-col leading-tight mt-0 md:mt-1 transition-transform duration-500 group-hover:translate-x-1">
             <span className={`text-2xl md:text-4xl font-black tracking-tight ${scrolled && !mobileOpen ? 'text-slate-900 group-hover:text-blue-600' : 'text-white group-hover:text-blue-200'} transition-colors duration-300`}>EVOKE AI</span>
-
-            <span className={`text-[10px] md:text-sm font-semibold tracking-widest ${scrolled && !mobileOpen ? 'text-slate-500 group-hover:text-blue-500' : 'text-white/60 group-hover:text-white'} transition-colors duration-300 uppercase`}>A Division of damnart </span>
-
             <span className={`text-[10px] md:text-sm font-semibold tracking-widest ${scrolled && !mobileOpen ? 'text-slate-500 group-hover:text-blue-500' : 'text-white/60 group-hover:text-white'} transition-colors duration-300 uppercase`}>Enterprise AI Platform</span>
 
           </div>
@@ -1184,11 +1181,11 @@ const Footer = () => {
                 <img src={evokeLogo} alt="Evoke AI" className="h-12 md:h-14 w-auto object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-500" />
                 <div className="flex flex-col leading-tight">
                   <span className="text-3xl font-black tracking-tight text-white group-hover:text-evoke-accent transition-colors duration-500 uppercase">EVOKE AI</span>
-                  <span className="text-sm font-semibold text-white/50 tracking-widest uppercase">A Division of DamnArt</span>
+                  <span className="text-sm font-semibold text-white/50 tracking-widest uppercase">Enterprise AI Platform</span>
                 </div>
               </div>
               <p className="text-gray-400 text-lg max-w-sm mb-6 leading-relaxed">
-                Enterprise AI Platform — turning your DMs into a 24/7 automated sales machine.
+                A division of damnart — turning your DMs into a 24/7 automated sales machine.
               </p>
               <div className="flex gap-4">
                 <a href="https://www.instagram.com/damnart_marketing_agency?igsh=cDRuZWx6dG56bDkx" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-orange-500 flex items-center justify-center hover:scale-110 hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300"><Instagram size={18} className="text-white" /></a>
@@ -1243,7 +1240,6 @@ const Footer = () => {
                 ].map((item, i) => (
                   <a key={i} href={item.href} target={item.href.startsWith('http') ? "_blank" : undefined} rel="noopener noreferrer" className="group flex items-center gap-4 hover:text-white transition-colors bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-evoke-accent/30">
                     <div className="w-12 h-12 rounded-full bg-evoke-accent/10 flex items-center justify-center group-hover:bg-evoke-accent transition-colors shrink-0">
-                      {React.cloneElement(item.icon as React.ReactElement, { size: 18, className: "text-evoke-accent group-hover:text-white transition-colors" })}
                       {React.cloneElement(item.icon as any, { size: 18, className: "text-evoke-accent group-hover:text-white transition-colors" })}
                     </div>
                     <span className="font-bold text-base truncate">{item.label}</span>
